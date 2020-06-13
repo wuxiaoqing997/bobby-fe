@@ -1,0 +1,186 @@
+/*
+flex: 容器设置
+
+    dir：主轴方向（默认从左到右）
+        top: 从上到下
+
+    main：主轴对齐方式 (默认从左到右)
+        right：从右到左
+        justify：两端对齐
+        center：居中对齐
+
+    cross：交叉轴对齐方式 (默认从上到下)
+        bottom：从上到下
+        baseline：基线对齐
+        center：居中对齐
+        stretch：高度并排铺满
+
+    box：子元素设置
+        mean：子元素平分空间
+        first：第一个子元素不要多余空间，其他子元素平分多余空间
+        last：最后一个子元素不要多余空间，其他子元素平分多余空间
+        justify：两端第一个元素不要多余空间，其他子元素平分多余空间
+
+flex-self: 子元素自身设置
+    grow:0~10
+        取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余空间
+        多余空间分配 = 当前grow值/子元素的grow值相加之和
+
+    cross: 交叉轴对齐方式 (默认从上到下)
+        bottom：从上到下
+        baseline：基线对齐
+        center：居中对齐
+        stretch：高度并排铺满
+*/
+
+.flex {
+    display: flex;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.f-dir-top {
+    flex-direction: column;
+}
+
+.f-main-center {
+    justify-content: center;
+}
+
+.f-main-justify {
+    justify-content: space-between;
+}
+
+.f-main-around {
+    justify-content: space-around;
+}
+
+.f-main-right {
+    justify-content: flex-end;
+}
+
+.f-cross-center {
+    align-items: center;
+}
+
+.f-cross-bottom {
+    align-items: flex-end;
+}
+
+.f-cross-baseline {
+    align-items: baseline;
+}
+
+.f-cross-stretch {
+    align-items: stretch;
+}
+
+.f-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.f-box-mean > *,
+.f-box-first > *,
+.f-box-last > *,
+.f-box-justify > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.f-box-first > *:first-child,
+.f-box-last > *:last-child,
+.f-box-justify > *:first-child,
+.f-box-justify > *:last-child {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.f-dir-top .f-box-mean,
+.f-dir-top .f-box-first,
+.f-dir-top .f-box-last,
+.f-dir-top .f-box-justify {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.f-dir-top .f-box-first > *:first-child,
+.f-dir-top .f-box-last > *:last-child,
+.f-dir-top .f-box-justify > *:first-child,
+.f-dir-top .f-box-justify > *:last-child {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.f-self-top {
+    align-self: flex-start;
+}
+
+.f-self-bottom {
+    align-self: flex-end;
+}
+
+.f-self-center {
+    align-self: center;
+}
+
+.f-self-baseline {
+    align-self: baseline;
+}
+
+.f-self-stretch {
+    align-self: stretch;
+}
+
+.f-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.f-2 {
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+.f-3 {
+    flex-grow: 3;
+    flex-shrink: 3;
+}
+
+.f-4 {
+    flex-grow: 4;
+    flex-shrink: 4;
+}
+
+.f-5 {
+    flex-grow: 5;
+    flex-shrink: 5;
+}
+
+.f-6 {
+    flex-grow: 6;
+    flex-shrink: 6;
+}
+
+.f-7 {
+    flex-grow: 7;
+    flex-shrink: 7;
+}
+
+.f-8 {
+    flex-grow: 8;
+    flex-shrink: 8;
+}
+
+.f-9 {
+    flex-grow: 9;
+    flex-shrink: 9;
+}
+
+.f-10 {
+    flex-grow: 10;
+    flex-shrink: 10;
+}
+
